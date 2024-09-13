@@ -1,8 +1,8 @@
 # Identificação
 
-* Nome: 
-* Email (@ccc): 
-* Matrícula: 
+* Nome: Aelson Júnior Araújo Diniz Cunha 
+* Email (@ccc): aelson.junior.araujo.diniz.cunha@ccc.ufcg.edu.br
+* Matrícula: 123110934
 
 # Roteiro: Fila de Prioridade
 

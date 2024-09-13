@@ -11,7 +11,14 @@ public class InsereOrdenadoFilaPrioridade implements FilaPrioridade {
 	}
 	
 	// criar um Pair e inserir de forma ordenada decrescente no array.
-	public void add(String elemento, int prioridade) {}
+	public void add(String elemento, int prioridade) {
+        Pair p = new Pair(elemento, prioridade);
+        if (isFull()) removeNext();
+
+
+
+
+    }
 
 
 	// remover e retornar o primeiro elemento do array, que é o de maior prioridade. lembrar manipular head e tail
