@@ -45,8 +45,8 @@ public class Heap {
         this.heap[tail] = p;
         
         int i = tail;
-        while (i > 0 && this.heap[parent(i)] < this.heap[i]) {
-            int aux = this.heap[i];
+        while (i > 0 && this.heap[parent(i)].getPrioridade() < this.heap[i].getPrioridade()) {
+            Pair aux = this.heap[i];
             this.heap[i] = this.heap[parent(i)];
             this.heap[parent(i)] = aux;
             i = parent(i);
@@ -80,16 +80,16 @@ public class Heap {
     } 
     
     private int max_index(int index, int left, int right) {
-        if (this.heap[index] > this.heap[left]) {
+        if (this.heap[index].getPrioridade() > this.heap[left].getPrioridade()) {
             if (isValidIndex(right)) {
-                if (this.heap[index] < this.heap[right])
+                if (this.heap[index].getPrioridade() < this.heap[right].getPrioridade())
                     return right;
             }
             return index;
         
         } else {
             if (isValidIndex(right)) {
-                if (this.heap[left] < this.heap[right])
+                if (this.heap[left].getPrioridade() < this.heap[right].getPrioridade())
                     return right;
             } 
             
@@ -112,7 +112,7 @@ public class Heap {
     }
 
     private void resize() {
-        Pair[] novoHeap = Pair int[this.heap.length * 2];
+        Pair[] novoHeap = new Pair[this.heap.length * 2];
         for (int i = 0; i <= tail; i++)
             novoHeap[i] = this.heap[i];
         

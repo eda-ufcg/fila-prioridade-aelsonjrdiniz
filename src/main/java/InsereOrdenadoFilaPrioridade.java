@@ -15,7 +15,7 @@ public class InsereOrdenadoFilaPrioridade implements FilaPrioridade {
 	}
 
 	private boolean isEmpty() {
-		return this.head == -1; && this.last == -1;
+		return this.head == -1 && this.last == -1;
 	}
 	
 	// criar um Pair e inserir de forma ordenada decrescente no array.
@@ -35,7 +35,7 @@ public class InsereOrdenadoFilaPrioridade implements FilaPrioridade {
     	}
 
 	private void swap(int i, int j) {
-		int aux = this.fila[i];
+		Pair aux = this.fila[i];
 		this.fila[i] = this.fila[j];
 		this.fila[j] = aux;
 	}
@@ -45,7 +45,7 @@ public class InsereOrdenadoFilaPrioridade implements FilaPrioridade {
 	// para ser uma fila circular. assim a remoção fica O(1)
 	public String removeNext() {
 		if (isEmpty()) return "";
-		return this.fila[(++this.head) % this.fila.length];
+		return this.fila[(++this.head) % this.fila.length].getElemento();
 	}
 	
 }
